@@ -7,9 +7,9 @@
 
   <script>
 let n = +prompt("количество дней", 1);
-const price = 450;
+const price = (450*12)/365;
 let result = n*price;
-alert (`стоимость интернета за ${n} дня(ей) ${result}`);
+alert (`стоимость интернета за ${n} дня(ей) ${result.toFixed(2)}`);
   </script>
 
   <p></p>
