@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p></p>
+
+  <script>
+let n = +prompt("количество дней", 1);
+const price = 450;
+let result = n*price;
+alert (`стоимость интернета за ${n} дня(ей) ${result}`);
+  </script>
+
+  <p></p>
+
+</body>
+
+</html>
