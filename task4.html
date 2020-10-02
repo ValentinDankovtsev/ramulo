@@ -4,6 +4,7 @@
 
 консоль, и напротив каждой буквы ее цифра. Вывести сумму цифр в консоль.
 
+
 let obj = {
  Н:1,
  К:5,
@@ -12,5 +13,14 @@ let obj = {
  О:7
 }
 
+function sumTo(str) {
+  let str = number('Н,Н,Н,К,П,Р,Р,Р,Р,О,Р,П,П,П,П,Р'); 
+  let sum = 0;
+  for (let i = 1; i <= str; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log( sumTo(str) )
 console.log('obj = ', obj);
-console.log(obj.Н+obj.Н+obj.Н+obj.К+obj.П+obj.Р+obj.Р+obj.Р+obj.Р+obj.О+obj.Р+obj.П+obj.П+obj.П+obj.П+obj.Р);
