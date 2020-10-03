@@ -78,16 +78,38 @@ clone.a6 = [1, 2, 3, 4, 5, 6];
 console.log(clone)
 
 // Example 7
-let a7 = [{
-  name: 'Vasya',
+const a7 = [{
+  name: 'Vasya ',
   age: 12
-}, {
-  name: 'Misha',
+},
+{
+  name: 'Misha  ',
   age: 14
-}, {
-  name: 'Pavel',
+},
+{
+  name: 'Pavel  ',
   age: 13
-}];
-const deepClone = JSON.parse(JSON.stringify(a7));
-a7.name = a7.name + "Pupkin";
-console.log(deepClone);
+}
+];
+
+function makeDeepCopy(obj){
+let newObj = {};
+  for( let i in obj) {
+               if (typeof obj[i] === "object" ){
+          newObj[i] = makeDeepCopy(obj[i])
+      }else {
+          newObj[i] = obj[i];
+      }
+  }
+  return newObj;
+}
+
+const b7 = makeDeepCopy(a7);
+
+a7.map((obj) => {
+obj.name = obj.name + "Pupkin";
+obj.age = obj.age;;
+} )
+
+console.log('a7 = ', a7);
+console.log('b7 = ', b7);
